@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HealthDrops</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- Strings de SendSmsActivity -->
+    <string name="confirm_panico_string"></string>
+
+    <!-- Strings de MainActivity -->
+
+    <string name="rem_name_string">Alarmes de \n remédios</string>
+    <string name="diario_name_string">Diário de \n bem-estar</string>
+    <string name="localizador_name_string">Localizador</string>
+    <string name="sinais_name_string">Sinais vitais</string>
+    <string name="logo_cont_string">Logotipo</string>
+    <string name="panico_name_string">PÂNICO</string>
+    <string name="contact_name_string">Mudar contato de emergência</string>
+
+    <!-- Strings de DiarioActivity -->
+
+    <string name="title_activity_diario_string">Diário de bem-estar</string>
+    <string name="edit_message_string">Como foi seu dia?</string>
+    <string name="salvar_text_string">Salvar</string>
+
+    <!-- Strings de ContactActivity -->
+    <string name="title_activity_contact">Contato de emergëncia</string>
+    <string name="title_contact_string">Informações do contato de emergência</string>
+    <string name="name_contact_text_string">Nome do Responsável</string>
+    <string name="name_contact_edit_string">Nome</string>
+    <string name="phone_contact_text_string">Telefone do Responsável</string>
+    <string name="phone_contact_edit_string">Telefone</string>
+    <string name="salvar_contact_button_string">Salvar</string>
+
+    <!-- Strings de SetAlarmActivity -->
+    <string name="title_activity_set_alarm">Novo alarme</string>
+    <string name="title_alarm_text_string">Novo Alarme</string>
+    <string name="medicine_name_alarm_text_string">Nome do remédio</string>
+    <string name="num_pills_dose_alarm_text_string">Número de comprimidos por dose</string>
+    <string name="num_pills_box_alarm_text_string">Número de comprimidos por caixa</string>
+    <string name="num_dosis_alarm_text_string">Número de doses</string>
+    <string name="first_dosis_time_alarm_text_string">Hora da Dose Inicial</string>
+    <string name="interval_dosis_alarm_text_string">Intervalo entre as doses</string>
+    <string name="salvar_alarm_button_string">Salvar Alarme</string>
+
+    <!-- Strings de LerDiarioActivity -->
+
+    <string name="ler_diario_text_string">Ler logs anteriores</string>
+    <string name="title_activity_ler_diario">Ler logs do diário</string>
+
+    <!-- Strings de SinaisActivity -->
+
+    <string name="title_activity_sinais">Sinais vitais</string>
+    <string name="title_activity_send_sms">SendSmsActivity</string>
+    <string name="title_activity_gps">GPSActivity</string>
+    <string name="title_activity_bluetooth_test">BluetoothTest</string>
+    <string name="title_activity_bluetooth">BluetoothActivity</string>
+
+</resources>
