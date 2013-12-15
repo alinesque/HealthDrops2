@@ -1,76 +1,77 @@
-<RelativeLayout 
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
-
-    <ImageView
-        android:id="@+id/logo_main_imageview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="@string/logo_cont_string"
-        android:src="@drawable/logo" />
-
-    <Button
-        android:id="@+id/diario_main_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/logo_main_imageview"
-        android:text="@string/diario_name_string" 
-        android:onClick="diarioButton" />
-
-    <Button
-        android:id="@+id/rem_main_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/diario_main_button"
-        android:layout_alignBottom="@id/diario_main_button"
-        android:layout_alignParentRight="true"
-        android:text="@string/rem_name_string"
-        android:onClick="remButton" />
-
-    <Button
-        android:id="@+id/localizador_main_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/logo_main_imageview"
-        android:layout_below="@id/diario_main_button"
-        android:text="@string/localizador_name_string"
-        android:onClick="gpsButton" />
-    
-    <Button
-        android:id="@+id/sinais_main_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@id/logo_main_imageview"
-        android:layout_below="@id/rem_main_button"
-        android:onClick="sinaisButton"
-        android:text="@string/sinais_name_string" />
-
-    <Button
-        android:id="@+id/panico_main_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/sinais_main_button"
-        android:onClick="smsButton"
-        android:text="@string/panico_name_string" />
-
-    <Button
-        android:id="@+id/contact_main_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/rem_main_button"
-        android:layout_below="@+id/panico_main_button"
-        android:onClick="contactButton"
-        android:text="@string/contact_name_string" />
-    
-</RelativeLayout>
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingBottom="@dimen/activity_vertical_margin"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+	    android:paddingTop="@dimen/activity_vertical_margin">
+	
+	    <ImageView
+	        android:id="@+id/logo_main_imageview"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:contentDescription="@string/logo_cont_string"
+	        android:src="@drawable/logo" />
+	
+	    <Button
+	        android:id="@+id/diario_main_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/logo_main_imageview"
+	        android:text="@string/diario_name_string" 
+	        android:onClick="diarioButton" />
+	
+	    <Button
+	        android:id="@+id/rem_main_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@id/diario_main_button"
+	        android:layout_alignBottom="@id/diario_main_button"
+	        android:layout_alignParentRight="true"
+	        android:text="@string/rem_name_string"
+	        android:onClick="remButton" />
+	
+	    <Button
+	        android:id="@+id/localizador_main_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/diario_main_button"
+	        android:text="@string/localizador_name_string"
+	        android:onClick="gpsButton" />
+	    
+	    <Button
+	        android:id="@+id/sinais_main_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/rem_main_button"
+	        android:layout_alignParentRight="true"
+	        android:onClick="sinaisButton"
+	        android:text="@string/sinais_name_string" />
+	
+	    <Button
+	        android:id="@+id/panico_main_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/sinais_main_button"
+	        android:onClick="smsButton"
+	        android:text="@string/panico_name_string" />
+	
+	    <Button
+	        android:id="@+id/contact_main_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/panico_main_button"
+	        android:onClick="contactButton"
+	        android:text="@string/contact_name_string" />
+	    
+	</RelativeLayout>
+</ScrollView>

@@ -20,15 +20,11 @@
           android:id="@+id/popup_text"
           android:layout_width="fill_parent"
           android:layout_height="wrap_content" />
-      <ImageView
-          android:layout_width="fill_parent"
-          android:layout_height="wrap_content"
-          android:src="@drawable/ic_launcher" />
       <Button
           android:id="@+id/dismiss"
           android:layout_width="fill_parent"
           android:layout_height="wrap_content"
-          android:text="Dismiss" />
+          android:text="Fechar" />
       </LinearLayout>
  </LinearLayout>
 </LinearLayout>

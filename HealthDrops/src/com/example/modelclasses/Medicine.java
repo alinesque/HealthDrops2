@@ -1,5 +1,7 @@
 package com.example.modelclasses;
 
+import java.util.ArrayList;
+
 import android.content.Context;
 import android.content.Intent;
 import android.provider.AlarmClock;
@@ -8,17 +10,12 @@ public class Medicine {
 
 	
 	private String name;
-	private int numDosisRestante, numPillsDose;
+	private int numDosisRestante, numPillsDose, numPillsCaixa;
 	private Horario horaUltimaDose = new Horario();
 	private Horario intervalDosis = new Horario();
 	Context context;
 	
-	public static final String ALARM_ALERT_ACTION = "com.android.deskclock.ALARM_ALERT";
-	public static final String ALARM_SNOOZE_ACTION = "com.android.deskclock.ALARM_SNOOZE";
-	public static final String ALARM_DISMISS_ACTION = "com.android.deskclock.ALARM_DISMISS";
-	public static final String ALARM_DONE_ACTION = "com.android.deskclock.ALARM_DONE";
-	
-	public Medicine(Context inContext, String inName, int inHoraIntervalDosis,int inMinIntervalDosis, int inNumDosisTotal, int inNumPillsDose, int inHoraDoseInicial, int inMinDoseInicial) {
+	public Medicine(Context inContext, String inName, int inHoraIntervalDosis,int inMinIntervalDosis, int inNumDosisTotal, int inNumPillsDose, int inHoraDoseInicial, int inMinDoseInicial, int inNumPillsCaixa) {
 		context = inContext;
 		
 		name = inName;
@@ -28,6 +25,8 @@ public class Medicine {
 		numPillsDose = inNumPillsDose;
 		horaUltimaDose.setHour(inHoraDoseInicial);
 		horaUltimaDose.setMinute(inMinDoseInicial);
+		numPillsCaixa = inNumPillsCaixa;
+		
 	}
 
 
@@ -140,6 +139,16 @@ public class Medicine {
 
 	public void setIntervalDosis(Horario intervalDosis) {
 		this.intervalDosis = intervalDosis;
+	}
+
+
+	public int getNumPillsCaixa() {
+		return numPillsCaixa;
+	}
+
+
+	public void setNumPillsCaixa(int numPillsCaixa) {
+		this.numPillsCaixa = numPillsCaixa;
 	}
 	
 }

@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.healthdrops.R;
 import com.example.modelclasses.AlarmReceiver;
@@ -36,24 +37,39 @@ public static final String LOG_TAG = "LogTag";
 	    EditText numPillsBoxEdit = (EditText) findViewById(R.id.num_pills_box_alarm_edittext);
 	    EditText numPillsDoseEdit = (EditText) findViewById(R.id.num_pills_dose_alarme_edittext);
 	    EditText DoseInicialEdit = (EditText) findViewById(R.id.first_dosis_time_alarm_edittext);
+
+	    String nameStr = null, intervalStr = null,horaIntervalStr = null, minIntervalStr = null, numDosisStr = null,
+	    		numPillsBoxStr = null, numPillsDoseStr = null, DoseInicialStr = null, horaDoseInicialStr = null,
+	    		minDoseInicialStr = null;
 	    
-	    String nameStr = nameEdit.getText().toString();
-	    String intervalStr = intervalEdit.getText().toString();
-	    	String horaIntervalStr = intervalStr.substring(0,intervalStr.indexOf(":"));
-	    	String minIntervalStr = intervalStr.substring(intervalStr.indexOf(":") + 1);
-	    String numDosisStr = numDosisEdit.getText().toString();
-	    String numPillsBoxStr = numPillsBoxEdit.getText().toString();
-	    String numPillsDoseStr = numPillsDoseEdit.getText().toString();                                //passando para strings e parseando
-	    String DoseInicialStr = DoseInicialEdit.getText().toString();
-			String horaDoseInicialStr = DoseInicialStr.substring(0,DoseInicialStr.indexOf(":"));
-	    	String minDoseInicialStr = DoseInicialStr.substring(DoseInicialStr.indexOf(":") + 1);
-		
-	    	
+	    try{
+		    nameStr = nameEdit.getText().toString();
+		    intervalStr = intervalEdit.getText().toString();
+		    numDosisStr = numDosisEdit.getText().toString();
+		    numPillsBoxStr = numPillsBoxEdit.getText().toString();
+		    numPillsDoseStr = numPillsDoseEdit.getText().toString();       //passando para strings e parseando
+		    DoseInicialStr = DoseInicialEdit.getText().toString();
+	    }catch(NullPointerException npe){
+	    	Toast.makeText(this, "Por favor,preencha todos os campos antes de prosseguir", Toast.LENGTH_SHORT).show();
+	    	return;
+	    }	
+	    try{	
+	    	horaIntervalStr = intervalStr.substring(0,intervalStr.indexOf(":"));
+	     	minIntervalStr = intervalStr.substring(intervalStr.indexOf(":") + 1);
+	    	horaDoseInicialStr = DoseInicialStr.substring(0,DoseInicialStr.indexOf(":"));
+	    	minDoseInicialStr = DoseInicialStr.substring(DoseInicialStr.indexOf(":") + 1);
+	    }catch(StringIndexOutOfBoundsException obe){
+	    	Toast.makeText(this, "Por favor,preencha todos os campos no formato adequado antes de prosseguir", Toast.LENGTH_SHORT).show();
+	    	return;
+	    }
+	    
 	    Log.e(LOG_TAG,"criando medicine");
-	    Medicine medicine = new Medicine(this,nameStr,Integer.decode(horaIntervalStr),Integer.decode(minIntervalStr),Integer.decode(numDosisStr),Integer.decode(numPillsDoseStr),Integer.decode(horaDoseInicialStr),Integer.decode(minDoseInicialStr));
+	    Medicine medicine = new Medicine(this,nameStr,Integer.decode(horaIntervalStr),Integer.decode(minIntervalStr),Integer.decode(numDosisStr),Integer.decode(numPillsDoseStr),Integer.decode(horaDoseInicialStr),Integer.decode(minDoseInicialStr), Integer.decode(numPillsBoxStr));
 	    Log.e(LOG_TAG,"criando receiver");
 	    AlarmReceiver almReceiver = new AlarmReceiver(this, medicine);
 	    Log.e(LOG_TAG,"colocando medicine em receiver");
+	    //registerReceiver(almReceiver);
+	    
 	    medicine.setAlarme();
 	    Log.e(LOG_TAG,"fim de setalarm");
     }

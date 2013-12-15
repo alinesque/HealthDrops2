@@ -52,9 +52,9 @@
     <!-- Strings de SinaisActivity -->
 
     <string name="title_activity_sinais">Sinais vitais</string>
-    <string name="title_activity_send_sms">SendSmsActivity</string>
-    <string name="title_activity_gps">GPSActivity</string>
-    <string name="title_activity_bluetooth_test">BluetoothTest</string>
-    <string name="title_activity_bluetooth">BluetoothActivity</string>
+    <string name="title_activity_send_sms">SMS de emergência</string>
+    <string name="title_activity_gps">Monitor de GPS</string>
+    <string name="title_activity_bluetooth_test">Bluetooth</string>
+    <string name="title_activity_bluetooth">Sinais Vitais</string>
 
 </resources>

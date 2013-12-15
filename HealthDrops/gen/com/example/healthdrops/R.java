@@ -21,58 +21,57 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int back=0x7f020000;
+        public static final int background=0x7f020000;
         public static final int ic_launcher=0x7f020001;
         public static final int logo=0x7f020002;
+        public static final int minihd=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f08002e;
-        public static final int confirm_contact_textview=0x7f080008;
-        public static final int confirm_diario_textview=0x7f08000a;
-        public static final int confirm_panico_textview=0x7f080019;
-        public static final int contact_main_button=0x7f080018;
-        public static final int diario_main_button=0x7f080013;
-        public static final int dismiss=0x7f08002c;
-        public static final int first_dosis_time_alarm_edittext=0x7f080025;
-        public static final int first_dosis_time_alarm_textview=0x7f080024;
-        public static final int gpsButton=0x7f080010;
-        public static final int interval_dosis_alarm_edittext=0x7f080027;
-        public static final int interval_dosis_alarm_textview=0x7f080026;
-        public static final int label=0x7f080000;
-        public static final int label1=0x7f08000e;
-        public static final int ler_diario_button=0x7f08000c;
-        public static final int localizador_main_button=0x7f080015;
-        public static final int log_diario_edittext=0x7f08000d;
-        public static final int logo_main_imageview=0x7f080012;
-        public static final int medicine_name_alarm_edittext=0x7f08001d;
-        public static final int medicine_name_alarm_textview=0x7f08001c;
-        public static final int metersEdit=0x7f080011;
-        public static final int metersText=0x7f08000f;
-        public static final int name_contact_edittext=0x7f080004;
-        public static final int name_contact_textview=0x7f080003;
-        public static final int num_dosis_alarm_textview=0x7f080022;
-        public static final int num_dosis_edittext=0x7f080023;
-        public static final int num_pills_box_alarm_edittext=0x7f080021;
-        public static final int num_pills_box_alarm_textview=0x7f080020;
-        public static final int num_pills_dose_alarm_textview=0x7f08001e;
-        public static final int num_pills_dose_alarme_edittext=0x7f08001f;
-        public static final int panico_main_button=0x7f080017;
-        public static final int phone_contact_edittext=0x7f080006;
-        public static final int phone_contact_textview=0x7f080005;
-        public static final int popup_text=0x7f08002b;
-        public static final int rem_main_button=0x7f080014;
-        public static final int rowTextView=0x7f08002d;
-        public static final int salvar_alarm_button=0x7f08001b;
-        public static final int salvar_contact_button=0x7f080007;
-        public static final int salvar_diario_button=0x7f08000b;
-        public static final int sinais_main_button=0x7f080016;
+        public static final int BluetoothButton=0x7f080002;
+        public static final int action_settings=0x7f08002c;
+        public static final int confirm_contact_textview=0x7f080009;
+        public static final int confirm_diario_textview=0x7f08000b;
+        public static final int confirm_panico_textview=0x7f08001a;
+        public static final int contact_main_button=0x7f080019;
+        public static final int diario_main_button=0x7f080014;
+        public static final int dismiss=0x7f08002a;
+        public static final int first_dosis_time_alarm_edittext=0x7f080026;
+        public static final int first_dosis_time_alarm_textview=0x7f080025;
+        public static final int gpsButton=0x7f080011;
+        public static final int infoView=0x7f080000;
+        public static final int interval_dosis_alarm_edittext=0x7f080028;
+        public static final int interval_dosis_alarm_textview=0x7f080027;
+        public static final int label1=0x7f08000f;
+        public static final int ler_diario_button=0x7f08000d;
+        public static final int localizador_main_button=0x7f080016;
+        public static final int log_diario_edittext=0x7f08000e;
+        public static final int logo_main_imageview=0x7f080013;
+        public static final int medicine_name_alarm_edittext=0x7f08001e;
+        public static final int medicine_name_alarm_textview=0x7f08001d;
+        public static final int metersEdit=0x7f080012;
+        public static final int metersText=0x7f080010;
+        public static final int name_contact_edittext=0x7f080005;
+        public static final int name_contact_textview=0x7f080004;
+        public static final int num_dosis_alarm_textview=0x7f080023;
+        public static final int num_dosis_edittext=0x7f080024;
+        public static final int num_pills_box_alarm_edittext=0x7f080022;
+        public static final int num_pills_box_alarm_textview=0x7f080021;
+        public static final int num_pills_dose_alarm_textview=0x7f08001f;
+        public static final int num_pills_dose_alarme_edittext=0x7f080020;
+        public static final int panico_main_button=0x7f080018;
+        public static final int phone_contact_edittext=0x7f080007;
+        public static final int phone_contact_textview=0x7f080006;
+        public static final int popup_text=0x7f080029;
+        public static final int rem_main_button=0x7f080015;
+        public static final int rowTextView=0x7f08002b;
+        public static final int salvar_alarm_button=0x7f08001c;
+        public static final int salvar_contact_button=0x7f080008;
+        public static final int salvar_diario_button=0x7f08000c;
+        public static final int sinais_main_button=0x7f080017;
         public static final int statusLabel=0x7f080001;
-        public static final int textView1=0x7f080028;
-        public static final int textView2=0x7f080029;
-        public static final int textView3=0x7f08002a;
-        public static final int title_alarm_textview=0x7f08001a;
-        public static final int title_contact_textview=0x7f080002;
-        public static final int title_diario_textview=0x7f080009;
+        public static final int title_alarm_textview=0x7f08001b;
+        public static final int title_contact_textview=0x7f080003;
+        public static final int title_diario_textview=0x7f08000a;
     }
     public static final class layout {
         public static final int activity_bluetooth=0x7f030000;
@@ -176,7 +175,6 @@ public final class R {
          */
         public static final int AppBaseTheme=0x7f060000;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
     }

@@ -30,12 +30,19 @@ public class GPSActivity extends Activity implements LocationListener
 	@Override
     public void onCreate(Bundle savedInstanceState)
 	{
-
-        textView = (TextView) findViewById(R.id.label1);
-        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 500, 1, this);
-        nowLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        homeLocation = nowLocation;//inicializando com a instancia de nowLocation
+		try{
+			textView = (TextView) findViewById(R.id.label1);
+			locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+			locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 500, 1, this);
+			nowLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+			homeLocation = nowLocation;//inicializando com a instancia de nowLocation
+		}catch(Exception e){
+			Log.e("LOGTAG", e.toString());
+		}
+		if(nowLocation == null || homeLocation == null){
+			Toast.makeText(this, "GPS não está disponível", Toast.LENGTH_SHORT).show();
+			finish();
+		}
 		try{
 			Log.d("tag", "em oncreate");
 			ArchiveManager archiveManager = new ArchiveManager(this);
@@ -55,7 +62,6 @@ public class GPSActivity extends Activity implements LocationListener
 			distance = Double.parseDouble(dist);
 			
 		}catch(Exception e){
-			Log.e("LOGTAG",e.getCause().toString());
 			Log.e("LOGTAG",e.toString());
 		}
 		
